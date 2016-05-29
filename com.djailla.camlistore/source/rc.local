@@ -3,11 +3,18 @@
 # rc.local
 #
 
+PIDFILE=/opt/camlistore/pid
+
 case $1 in
   start)
-    echo 'Camlistore start'
+    start-stop-daemon --start \
+                      --make-pidfile \
+                      --pidfile $PIDFILE \
+                      --background \
+                      --exec /opt/camlistore/bin/camlistored
     ;;
   stop)
-    echo 'Camlistore stop'
+    start-stop-daemon --stop --pidfile $PIDFILE
+    rm $PIDFILE
     ;;
 esac
