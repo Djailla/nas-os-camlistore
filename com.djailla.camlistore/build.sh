@@ -11,6 +11,7 @@ apt-get install -y -q golang git
 cd /opt/
 git clone https://camlistore.googlesource.com/camlistore
 cd /opt/camlistore/
+git checkout 0.9
 
 # Build the package
 go run make.go
