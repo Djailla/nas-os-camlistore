@@ -3,6 +3,8 @@
 # rc.local
 #
 
+sed -i "s/\"listen\": \":[0-9]*\",/\"listen\": \":$RAINBOW_PORT_WEB_UI\"/" /root/.config/camlistore/server-config.json
+
 PIDFILE=/opt/camlistore/pid
 
 case $1 in

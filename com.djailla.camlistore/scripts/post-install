@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo "{\"port\":$RAINBOW_PORT_WEB_UI, \"path\":\"$RAINBOW_WEB_PATH\"}" > /opt/camlistore/.config
+sed -i "s/\"auth\": \"localhost\",/\"auth\": \"none\"/" /root/.config/camlistore/server-config.json
 
 exit 0
