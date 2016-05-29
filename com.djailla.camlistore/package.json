@@ -1,0 +1,14 @@
+{
+    "type": "application",
+    "id": "com.djailla.camlistore",
+    "version": "0.9.0",
+    "depends": [
+        "org.debian.wheezy-lamp-1.2"
+    ],
+    "startup_mode": "auto",
+    "display_mode": "tab",
+    "redirect_mode": "custom",
+    "network_ports": {
+        "WEB_UI": 3179
+    }
+}

@@ -1,0 +1,13 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+
+case $1 in
+  start)
+    echo 'Camlistore start'
+    ;;
+  stop)
+    echo 'Camlistore stop'
+    ;;
+esac

@@ -1,0 +1,19 @@
+{
+    "name": {
+        "en": "Camlistore"
+    },
+    "description_short": {
+        "en": "Camlistore is your personal storage system for life."
+    },
+    "visibility": "always",
+    "categories": [
+        "productivity"
+    ],
+    "publication_date": "2016-02-08",
+    "publisher_name": "Djailla",
+    "publisher_contact": "bastien.vallet@gmail.com",
+    "supported_languages": [
+        "en"
+    ],
+    "website_url": "https://github.com/Djailla/nas-os-camlistore/"
+}
