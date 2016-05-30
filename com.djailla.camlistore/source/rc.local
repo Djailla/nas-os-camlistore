@@ -3,7 +3,7 @@
 # rc.local
 #
 
-sed -i "s/\"listen\": \":[0-9]*\",/\"listen\": \":$RAINBOW_PORT_WEB_UI\"/" /root/.config/camlistore/server-config.json
+sed -i "s/\"listen\": \":[0-9]*\",/\"listen\": \":$RAINBOW_PORT_WEB_UI\",/" /opt/camlistore/config/server-config.json
 
 PIDFILE=/opt/camlistore/pid
 
@@ -13,7 +13,9 @@ case $1 in
                       --make-pidfile \
                       --pidfile $PIDFILE \
                       --background \
-                      --exec /opt/camlistore/bin/camlistored
+                      --exec /opt/camlistore/bin/camlistored \
+                      -- -configfile /opt/camlistore/config/server-config.json
+
     ;;
   stop)
     start-stop-daemon --stop --pidfile $PIDFILE

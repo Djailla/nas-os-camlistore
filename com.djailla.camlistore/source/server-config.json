@@ -1,0 +1,10 @@
+{
+    "auth": "none",
+    "listen": ":3179",
+    "identity": "5162AD38",
+    "identitySecretRing": "/opt/camlistore/config/identity-secring.gpg",
+    "blobPath": "/root/var/camlistore/blobs",
+    "packRelated": true,
+    "levelDB": "/root/var/camlistore/index.leveldb",
+    "dbNames": null
+}

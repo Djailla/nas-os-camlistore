@@ -1,5 +1,7 @@
 #!/bin/sh
 
-sed -i "s/\"auth\": \"localhost\",/\"auth\": \"none\"/" /root/.config/camlistore/server-config.json
+/opt/camlistore/bin/camput init -newkey
+cp /root/.config/camlistore/identity-secring.gpg /opt/camlistore/config/
+/opt/camlistore/update_identity.py
 
 exit 0
