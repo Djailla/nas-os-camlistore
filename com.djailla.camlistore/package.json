@@ -5,8 +5,6 @@
     "depends": [
         "org.debian.wheezy-lamp-1.2"
     ],
-    "startup_mode": "auto",
-    "display_mode": "tab",
     "redirect_mode": "custom",
     "user_data_access": false,
     "app_data": [
