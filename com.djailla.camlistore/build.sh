@@ -3,15 +3,15 @@
 mkdir -m 755 -p /opt/camlistore/config
 install -m 755 /home/source/rc.local /etc
 install -m 755 /home/source/server-config.json /opt/camlistore/config/
-install -m 755 /home/source/update_identity.py /opt/camlistore/
+install -m 755 /home/source/update_identity.py /opt/camlistore
 
 # Install Git
 apt-get update
-apt-get install -y -q git
+apt-get install -y -q git libjpeg-progs
 
 if [ $RAINBOW_ARCHITECTURE = "x86_64" ]
 then
-# Install Golang
+	# Install Golang
     cd /tmp
     wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
     tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
