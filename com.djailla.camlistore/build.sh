@@ -13,8 +13,8 @@ if [ $RAINBOW_ARCHITECTURE = "x86_64" ]
 then
 	# Install Golang
     cd /tmp
-    wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
-    tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
+    wget https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz
+    tar -C /usr/local -xzf go1.7.linux-amd64.tar.gz
     export PATH=$PATH:/usr/local/go/bin
 else
     echo "No ARM compatible version"
