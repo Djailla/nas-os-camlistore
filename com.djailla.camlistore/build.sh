@@ -11,7 +11,7 @@ apt-get install -y -q git libjpeg-progs
 
 if [ $RAINBOW_ARCHITECTURE = "x86_64" ]
 then
-	# Install Golang
+    # Install Golang
     cd /tmp
     wget https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz
     tar -C /usr/local -xzf go1.7.linux-amd64.tar.gz
@@ -23,13 +23,17 @@ fi
 
 # Checkout sources in /opt
 cd /tmp
-git clone https://camlistore.googlesource.com/camlistore
+git clone --depth=1 https://camlistore.googlesource.com/camlistore
 
 # Build the package
 cd /tmp/camlistore/
 go run make.go
 
 mv /tmp/camlistore/bin/ /opt/camlistore/
+
+# Cleanup
+apt-get -y -q autoremove git
+apt-get -y -q clean
 
 rm -rf /usr/local/go
 rm -rf /tmp/*
